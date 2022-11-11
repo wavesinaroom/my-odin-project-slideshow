@@ -46,3 +46,4 @@ circles.forEach((circle)=>{
   });
 });
 
+changeSlide(2);
