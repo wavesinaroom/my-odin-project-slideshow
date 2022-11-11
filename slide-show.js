@@ -1,4 +1,5 @@
-const slides = [...document.querySelectorAll(".frame")];
+const slides = [...document.querySelectorAll('.frame')];
+const circles = [...document.querySelectorAll('.circle')];
 let pointer = 0;
 
 function changeSlide(pointer) {
@@ -38,4 +39,10 @@ document.getElementById('previous').addEventListener('click', ()=>{
   changeSlide(goToPreviousSlide());
 });
 
-changeSlide('2');
+circles.forEach((circle)=>{
+  circle.addEventListener('click', ()=>{
+    pointer = parseInt(circle.id);
+    changeSlide(parseInt(pointer));
+  });
+});
+
