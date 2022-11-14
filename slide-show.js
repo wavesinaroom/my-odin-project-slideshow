@@ -4,12 +4,13 @@ let pointer = 0;
 
 function changeSlide(pointer) {
  for(let i = 0; i<slides.length; i+=1){ 
+      slides[i].firstElementChild.style.border = 'solid';
     if (slides[i].id === pointer.toString()) {
-      slides[i].style.color ='red';
+      slides[i].firstElementChild.style.borderColor ='red';
       circles[i].style.backgroundColor = 'orange';
     } else {
-      slides[i].style.color = 'blue';
-      circles[i].style.backgroundColor = 'transparent';
+      slides[i].firstElementChild.style.borderColor = 'blue';
+      circles[i].backgroundColor = 'transparent';
     }
   }
 }
