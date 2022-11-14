@@ -10,8 +10,8 @@ nav{
 }
 
 img{
-  max-width: 470px;
-  max-height: 320px;
+  max-width: 750px;
+  max-height: 480px;
 }
 
 button{
@@ -41,7 +41,7 @@ button{
 #carousel{
   display: flex;
   position: absolute;
-  top:30%;
+  top:23%;
 }
 
 #carousel > *{
