@@ -35,9 +35,12 @@ nav{
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  background-color: red;
+  border-style: solid;
+  border-color: green;
   margin-left: 7px;
   margin-right: 7px;
+  transition: font-size 2000ms ease-in-out;
 }
+
 
 

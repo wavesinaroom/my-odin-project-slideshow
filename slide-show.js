@@ -3,14 +3,15 @@ const circles = [...document.querySelectorAll('.circle')];
 let pointer = 0;
 
 function changeSlide(pointer) {
-  slides.forEach((slide) => {
-    console.log(pointer);
-    if (slide.id === pointer.toString()) {
-      slide.style.color ='red';
+ for(let i = 0; i<slides.length; i+=1){ 
+    if (slides[i].id === pointer.toString()) {
+      slides[i].style.color ='red';
+      circles[i].style.backgroundColor = 'orange';
     } else {
-      slide.style.color = 'blue';
+      slides[i].style.color = 'blue';
+      circles[i].style.backgroundColor = 'transparent';
     }
-  });
+  }
 }
 
 function goToNextSlide(){
@@ -47,3 +48,5 @@ circles.forEach((circle)=>{
 });
 
 changeSlide(2);
+
+document.body.style.backgroundColor = 'green';
