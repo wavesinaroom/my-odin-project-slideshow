@@ -7,7 +7,7 @@ function changeSlide(pointer) {
       slides[i].firstElementChild.style.border = 'solid';
     if (slides[i].id === pointer.toString()) {
       slides[i].firstElementChild.style.borderColor ='red';
-      circles[i].style.backgroundColor = 'orange';
+      circles[i].style.backgroundColor = '#941a1f';
     } else {
       slides[i].firstElementChild.style.borderColor = 'blue';
       circles[i].style.backgroundColor = 'transparent';
