@@ -47,6 +47,9 @@ circles.forEach((circle)=>{
   });
 });
 
-changeSlide(2);
+pointer = 2;
+changeSlide(pointer);
 
 document.body.style.backgroundColor = 'green';
+
+setInterval(()=>changeSlide(goToNextSlide()), 2000 );
