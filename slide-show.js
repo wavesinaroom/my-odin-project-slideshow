@@ -10,7 +10,7 @@ function changeSlide(pointer) {
       circles[i].style.backgroundColor = 'orange';
     } else {
       slides[i].firstElementChild.style.borderColor = 'blue';
-      circles[i].backgroundColor = 'transparent';
+      circles[i].style.backgroundColor = 'transparent';
     }
   }
 }
@@ -50,7 +50,5 @@ circles.forEach((circle)=>{
 
 pointer = 2;
 changeSlide(pointer);
-
-document.body.style.backgroundColor = 'green';
 
 setInterval(()=>changeSlide(goToNextSlide()), 2000 );
