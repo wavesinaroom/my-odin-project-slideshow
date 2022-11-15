@@ -3,13 +3,13 @@ const circles = [...document.querySelectorAll('.circle')];
 let pointer = 0;
 
 function changeSlide(pointer) {
+  document.getElementById('carousel').style.setProperty('--current-slide', pointer);
  for(let i = 0; i<slides.length; i+=1){ 
-      slides[i].firstElementChild.style.border = 'solid';
     if (slides[i].id === pointer.toString()) {
-      slides[i].firstElementChild.style.borderColor ='red';
+      slides[i].style.backdropFilter = 'blur';
       circles[i].style.backgroundColor = '#941a1f';
     } else {
-      slides[i].firstElementChild.style.borderColor = 'blue';
+      slides[i].style.backdropFilter = 'none';
       circles[i].style.backgroundColor = 'transparent';
     }
   }

@@ -13,21 +13,22 @@ nav{
 img{
   max-width: 750px;
   max-height: 480px;
+  margin-right: 50px;
 }
 
 button{
   border:none;
   background-color: transparent;
-  color:orange;
+  color:green;
   font-size: 30px;
 }
 
 #slide-show{
   height: 1200px;
   width: 800px;
-  position:absolute;
   left: 50%;
   top: 30%;
+  position: absolute;
   margin-left: -250px;
   margin-top: -250px;
   display: flex;
@@ -35,13 +36,17 @@ button{
   align-items: center;
   background-color: #FEFCF2;
   border-radius: 20px;
-  box-shadow: 10px, 10px, black;
+  --current-slide: 0;
+  overflow: hidden;
 }
 
 
 #carousel{
+  transition:0.5s;
+  transform: translateX(calc(-20%*var(--current-slide)));
   display: flex;
   position: absolute;
+  left: 28%;
   top:23%;
 }
 
