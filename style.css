@@ -1,6 +1,7 @@
 body{
   background-color: #941a1f;
-  background: linear-gradient(#941a1f, #cf7623);
+  display: flex;
+  justify-content: space-evenly;
 }
 
 nav{
@@ -16,31 +17,42 @@ img{
 }
 
 button{
-  border:none;
+  margin-top: 50%;
+  max-width: 50px;
+  max-height: 50px;
+  border-style: none;
   background-color: transparent;
-  color:green;
-  font-size: 30px;
+  color:#FEFCF2;
+  font-size: 60px;
+}
+
+#canvas{
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  margin-left: -250px;
+  margin-top: -250px;
+  overflow: hidden;
 }
 
 #slide-show{
   height: 1200px;
   width: 800px;
-  left: 50%;
-  top: 30%;
-  position: absolute;
-  margin-left: -250px;
-  margin-top: -250px;
+  margin-right: 2vw;
+  margin-left: 2vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #FEFCF2;
   border-radius: 20px;
   --current-slide: 0;
-  overflow: hidden;
 }
 
 
 #carousel{
+  margin-right: 2vw;
+  margin-left: 2vw;
   transition:0.5s;
   transform: translateX(calc(-20%*var(--current-slide)));
   display: flex;
